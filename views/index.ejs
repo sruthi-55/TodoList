@@ -6,11 +6,16 @@
     <title>ToDoList</title>
 </head>
 <body>
-    <h2> <%= typeOfDay %> List </h2>
+    <h2> <%= day %></h2>
     <ul>
         <li>Buy Food</li>
         <li>Cook Food</li>
         <li>Eat Food</li>
+
+        <% for(let i=0;i<items.length;i++){ %>
+            <li> <%=items[i]%> </li>
+        <% } %>
+        
     </ul>
     <form action="/" method="post">
         <input type="text" name="newItem" placeholder="Enter an item" autocomplete="off">
